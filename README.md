@@ -40,13 +40,15 @@ All critical operations emit events, improving on-chain traceability and integra
 - Access to [https://remix.ethereum.org](https://remix.ethereum.org)
 
 ### **2.2. Steps**
-1. Open Remix and create the `/contracts` folder
+1. Open Remix and create the `/src` folder
 2. Copy `KipuBankV2.sol` into this folder
-3. Install OpenZeppelin imports via **Remix Libraries** or direct import from the official repository
-4. Select compiler `0.8.x` and compile
+4. Select compiler `+0.8.26` and compile
 5. Open the **Deploy & Run** tab
-6. Network: `Injected Provider – MetaMask`
-7. Deploy the contract, assigning the `admin` role to `msg.sender`
+6. Network: `Injected Provider – MetaMask` or any `REMIX VM` 
+7. Deploy the contract, assigning 
+`initialCapUSD` = e.g 100000e18 
+`_ethPriceFeed` = e.g `0x694AA1769357215DE4FAC081bf1f309aDC325306` -> ETH/USD Sepolia Chainlink 
+`_admin` = e.g sender address
 8. Save the resulting address for future interactions
 
 ---
@@ -87,8 +89,8 @@ This convention avoids duplicate logic and unifies accounting with ERC-20 tokens
 
 | Network | Status | Address |
 |-------|---------|-----------|
-| Sepolia | *Deployed and pending verification* | 0xD31Ec1457Fa571EEcfB723905b2a780E0f30E4db |
-
+| Sepolia | *Deployed and verified* | 0x70724C49419A24e5E4d78e60d0Cc68F4f5691935 |
+[View on Sepolia Etherscan](https://sepolia.etherscan.io/address/0x70724C49419A24e5E4d78e60d0Cc68F4f5691935#code)
 ---
 
 ## 6. License
